@@ -149,7 +149,7 @@
   transition: opacity 0.3s ease-out;
   background-color: #fff;
 }
-.sc-about {
+.cont-about {
   position: relative;
   width: 100%;
   /* background: url(../images/noise-bg.png) repeat; */
@@ -157,7 +157,7 @@
   height: 100vh;
 	background: #000;
 }
-.sc-about .title-area {
+.cont-about .title-area {
   padding: 68px 60px 0;
   font-family: "Montserrat", "Noto Sans KR", sans-serif;
   font-weight: 800;
@@ -170,20 +170,20 @@
   overflow: hidden;
   word-wrap: wrap;
 }
-.sc-about .title-area p {
+.cont-about .title-area p {
   overflow: hidden;
 }
-.sc-about .title-area span {
+.cont-about .title-area span {
   display: inline-block;
   position: relative;
 }
-.sc-about .info-area {
+.cont-about .info-area {
   position: absolute;
   bottom: 160px;
   right: 60px;
   margin-top: 189px;
 }
-.sc-about .info-area p {
+.cont-about .info-area p {
   display: flex;
   flex-direction: column;
   font-family: "Noto Sans KR", sans-serif;
@@ -194,10 +194,10 @@
   text-align: right;
   overflow: hidden;
 }
-.sc-about .info-area span {
+.cont-about .info-area span {
   display: block;
 }
-.sc-about i.fa-arrow-down {
+.cont-about i.fa-arrow-down {
   position: absolute;
   bottom: 20px;
   left: 50%;
