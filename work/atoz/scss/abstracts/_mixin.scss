@@ -1,0 +1,40 @@
+
+@mixin flexVal($disp:flex, $justi:start, $align:start, $fleWrap:nowrap){
+    display: -webkit-box;
+    display: -moz-box;
+    display: $disp;
+    display: -ms-+$disp+box;
+    justify-content: $justi;
+    -webkit-box-pack: $justi;
+    -ms-flex-pack: $justi;
+    align-items: $align;
+    -webkit-box-align: $align;
+    -ms-flex-align: $align;
+    -moz-flex-wrap: $fleWrap;
+    -ms-flex-wrap: $fleWrap;
+    flex-wrap: $fleWrap;
+}
+
+@mixin bgCustom($url:'', $repeat:no-repeat, $position:center, $size:cover){
+  background: url($url) $repeat $position / $size;
+}
+@mixin bgCustomNoneCover($url:'', $repeat:no-repeat, $position:center) {
+  background: url($url) $repeat $position
+}
+  
+
+  
+@mixin positionCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  }
+
+  @mixin positionCustom($top:0, $left:0, $tranX:0, $tranY:0) {
+    position: absolute;
+    top:$top;
+    left: $left;
+    transform: translate($tranX, $tranY);
+    }
+

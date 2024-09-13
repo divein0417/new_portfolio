@@ -1,0 +1,228 @@
+html.overflow {
+    overflow: hidden;
+}
+
+#wrap {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    font-family: 'esamanru';
+}
+
+.only {
+    &_w {
+        display: block !important;
+
+    }
+
+    &_m {
+        display: none !important;
+
+    }
+}
+
+[class^="inner"] {
+    max-width: 1200px;
+    position: relative;
+    margin: 0 auto;
+    width: calc(100% - 2.14285rem);
+}
+
+
+// common 
+
+
+
+// header 
+#header {
+    position: absolute;
+    width: 100%;
+    z-index: 90;
+    background: transparent;
+    top: 40px;
+
+    .inner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
+
+.quick_menu{
+    position: fixed;
+    top: 120px;
+    right: 60px;      
+    z-index: 80;
+    
+    a{
+        display: block;
+        text-indent: -99999px;
+        font-size: 0;
+        width: 84px;
+        height: 84px;
+        span{
+            display: block;
+            width: 100%;
+            height: 100%;
+            @include bgCustom('../img/kakao_ico.png');
+        }
+    }
+    a+a{
+        margin-top: 20px;
+
+        span{
+
+            background-image: url('../img/tel_ico.png');
+        }
+    }
+}
+
+// footer 
+#footer {
+    padding: 82px 0;
+    background-color: #fff;
+    @extend %foot-txt;
+    color: $foot-color;
+    line-height: 1.5;
+
+    .inner {
+        @include flexVal(flex, center, center);
+
+            .logo {
+                margin-right: 101px;
+
+            }
+
+
+            .foot_info {
+
+                address {
+
+
+                        p {
+                            display: flex;
+
+                                span {
+                                    flex: 0 0 auto;
+                                    margin-right: 5px;
+                                }
+                        }
+                    
+                }
+                .copy{
+                    margin-top: 50px;
+                }
+            }
+    }
+}
+// //footer 
+
+
+/* popup_wrap */
+.popup_wrap {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2222;
+
+    .pop_box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: calc(100% - 30px);
+        max-width: 880px;
+        height: 90vh;
+        overflow-y: auto;
+        z-index: 2;
+
+            .pop_top {
+                font-size: 69px;
+                font-weight: 700;
+                color: #fff;
+                text-align: center;
+                box-sizing: border-box;
+
+                .logo {
+                }
+            }
+
+            .pop_body_wrap {
+                padding: 0 100px;
+                position: relative;
+
+                .pop_body {
+                    margin-top: 85px;
+                    border-radius: 25px;
+                    background: rgba($color: $c-black, $alpha: 0.7);
+                    padding: 80px;
+                    box-sizing: border-box;
+                }
+            }
+    }
+
+    .dim {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background:transparent;
+    }
+}
+
+
+.fix_btn_wrap {
+    position: fixed;
+    right: 60px;
+    bottom: -50%;
+    transition: all 0.7s ease-in-out;
+    z-index: 30;
+
+        &.on {
+            bottom: 80px;
+        }
+}
+.fix_btn {
+    display: block;
+    width: 150px;
+    height: 150px;
+    background-color: $c-purple;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 33px;
+    font-weight: 500;
+
+        & + .fix_btn {
+            margin-top: 20px;
+        }
+
+        &.top_btn {
+            background-color: $c-black;
+        }
+
+        .ico {
+            @include bgCustom('../img/top_btn.png',no-repeat,center);
+            width: 37px;
+            height: 22px;
+            display: block;
+            margin: 0 auto 22px;
+        }
+}
+
+
+small {
+    &.web {
+        display: inline-block !important;
+    }
+
+    &.mo {
+        display: none !important;
+    }
+
+}
+

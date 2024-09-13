@@ -1,0 +1,605 @@
+// custom css
+
+
+small {
+    width: 1px;
+    height: 0.85em;
+    display: inline-block;
+    margin: -0.2em 0.5em 0 0.75em;
+    background-color: #5c5c5c;
+    vertical-align: middle;
+    // font-weight: 100; 
+}
+
+
+.hidden {
+    overflow: hidden;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    display: none;
+}
+
+
+select,
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+input[type="tel"] {
+    width: 100%;
+    display: block;
+    border: 1px solid #dbdbdb;
+
+
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+input[type="tel"] {
+    padding: 0 0.9375em;
+
+}
+
+textarea::placeholder {
+    color: #191919;
+}
+
+input[type="text"]:hover,
+input[type="text"]:focus,
+input[type="password"]:hover,
+input[type="password"]:focus,
+input[type="email"]:hover,
+input[type="email"]:focus,
+input[type="number"]:hover,
+input[type="number"]:focus,
+input[type="tel"]:hover,
+input[type="tel"]:focus {
+    border-color: #eee;
+}
+
+.textarea_wrap {
+    position: relative;
+}
+
+.placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    padding: 32px 34px;
+
+}
+
+.placeholder p {
+    line-height: 1.5;
+    color: #999;
+}
+
+// **************custom****************** 
+.hidden {
+    overflow: hidden;
+}
+
+#wrap {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+
+}
+
+#container {
+    position: relative;
+}
+
+#footer {
+    position: relative;
+}
+
+// ------------------------------------------------------------ 
+
+// text-align 
+.ta {
+    &l {
+        text-align: left !important;
+    }
+
+    &r {
+        text-align: right !important;
+    }
+
+    &c {
+        text-align: center !important;
+    }
+}
+
+.color {
+
+    &_w {
+        color: #fff !important;
+    }
+
+    &_b1 {
+        color: #252525 !important;
+    }
+
+    &_b2 {
+        color: #454545 !important;
+    }
+
+    &_g1 {
+        color: #757575 !important;
+    }
+
+    &_g2 {
+        color: #999 !important;
+    }
+
+    &_point{
+        color: $c-pt !important;
+    }
+
+}
+
+// textarea placeholder 
+
+.placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+
+}
+
+.placeholder li p {
+    line-height: 1.5;
+    color: #999;
+    text-indent: -10px;
+    padding-left: 10px;
+}
+
+.blind {
+    font-size: 0;
+}
+
+.chk_box {
+    display: flex;
+    align-items: center;
+    line-height: $chk-w1;
+
+    input[type="checkbox"] {
+        display: none;
+
+        &+label {
+            display: flex;
+            position: relative;
+            padding-left: 60px;
+            vertical-align: middle;
+            cursor: pointer;
+
+            &::after {
+                content: '';
+                position: absolute;
+                background-color: #fff;
+                background-position: center;
+                background-repeat: no-repeat;
+                border: 1px solid $l-db;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                width: $chk-w1;
+                height: $chk-w1;
+                border-radius: 50%;
+            }
+        }
+        &:checked+label::after{
+            border: 1px solid $c-purple;
+            background-image: url(../img/ico_chk.png);
+    
+        }
+
+    }
+    
+    &.small {
+        line-height: $chk-w2;
+        input[type="checkbox"] {
+    
+            &+label {
+                padding-left: calc($chk-w2 + 10px);
+                vertical-align: middle;
+                cursor: pointer;
+    
+                &::after {
+                    width: $chk-w2;
+                    height: $chk-w2;
+                }
+            }
+            &:checked+label::after{
+                background-image: url(../img/ico_chk_small.png);
+        
+            }
+    
+        }
+    }
+}
+
+
+.radiobox_wrap {
+    &>div{
+        display: inline-block;
+        
+        &+div{
+
+            margin-left: 20px;
+        }
+    }
+}
+.radiobox {
+    input[type="radio"] {
+        display: none;
+
+        &+label{
+            vertical-align: middle;
+            position: relative;
+            display: inline-block;
+            padding-left: calc($rdo-w1 + 10px);
+            line-height: $rdo-w1;
+            cursor: pointer;
+
+            &::after,
+            &::before{
+                content: '';
+                position: absolute;
+                background-color: $c-w;
+                background-position: center;
+                background-repeat: no-repeat;
+                border: 1px solid $l-db;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                width: $rdo-w1;
+                height: $rdo-w1;
+                border-radius: 100%;
+            }
+            &::after{
+                width: $rdo-in-w1;
+                height: $rdo-in-w1;
+                transform: translate(43%, -50%);
+                border: none;
+            }
+        }
+        &:checked+label::after{
+            background-color: $c-pt;
+
+        }
+    }
+}
+
+.radiobox2 {
+    input[type="radio"] {
+        display: none;
+
+        &+label{
+            position: relative;
+            display: inline-block;
+            padding-left: calc($rdo-w1 + 10px);
+            line-height: $rdo-w1;
+            cursor: pointer;
+
+            &::after,
+            &::before{
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                width: $rdo-w1;
+                height: $rdo-w1;
+                border-radius: 100%;
+            }
+            &::before{
+                background-color: $c-w;
+                border: 1px solid $l-db;
+            }
+            &::after{
+                width: calc($rdo-w1 / 2);
+                height: calc($rdo-w1 / 2);
+                margin-left: calc($rdo-w1 / 3.5);
+            }
+        }
+        &:checked+label::before{
+            background-color: $c-pt;
+            border: 1px solid $c-pt;
+        }
+        &:checked+label::after{
+            background-color: $c-w;
+
+        }
+    }
+}
+
+// 달력 
+.ui-datepicker.ui-widget.ui-widget-content.ui-helper-clearfix.ui-corner-all {
+    display: none;
+    position: relative;
+    margin-top: 10px;
+    background: #fff;
+    border: solid 1px #dddddd;
+    border-radius: 5px;
+    z-index: 99999 !important;
+    
+    table{
+        background: #fff;
+
+        thead tr th{
+            width: 32px;
+            line-height: 24px;
+            height: 24px;
+            text-align: center;
+            padding-right: 5px;
+            
+            span{
+                font-size: 10.1px;
+                font-weight: 300;
+                color: #999999;
+            }
+        }
+
+        tbody{
+
+            tr td{
+                text-align: center;
+                color: #666666;
+                font-size: 12px;
+                width: 35px;
+                height: 35px;
+                padding-right: 0px;
+                background: #ffffff;
+                margin: 1px;
+
+                a{
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    line-height: 33px;
+                    border-radius: 50%;
+                    font-weight: 300;
+
+                    &:hover{
+                        background-color: $c-pt;
+                        color: #fff;
+                    }
+                    &.ui-state-default.ui-state-active{
+                        border: solid 1px $c-pt;
+                    }
+                }
+                &.ui-datepicker-unselectable.ui-state-disabled {
+                    background: #fff;
+                    color: #cecece;
+                }
+                
+            }
+        }
+        
+    }
+}
+
+
+
+.ui-datepicker-title {
+    display: table;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    span{
+        text-align: center;
+        color: #000000;
+        font-size: 15px;
+        font-weight: 500;
+
+        &.ui-datepicker-year {
+            font-weight: 300;
+        }
+    }
+    select.ui-datepicker-year,
+    select.ui-datepicker-month {
+        display: inline-block;
+        border: 1px solid #dbdbdb;
+        width: 32px;
+        height: 20px;
+        box-sizing: content-box;
+    }
+    select.ui-datepicker-month {
+        margin-left: 10px;
+    }
+}
+
+
+
+.ui-datepicker-header.ui-widget-header.ui-helper-clearfix.ui-corner-all {
+    position: relative;
+
+    a.ui-datepicker-prev {
+        text-indent: -9999px;
+        position: absolute;
+        background: url("../img/btn/calandar_left.png")no-repeat center;
+        width: 16px;
+        height: 18px;
+        left: 10px;
+        top: -2px;
+        cursor: pointer;
+    }
+    a.ui-datepicker-next {
+        text-indent: -9999px;
+        position: absolute;
+        background: url("../img/btn/calandar_right.png")no-repeat center;
+        width: 16px;
+        height: 18px;
+        right: 10px;
+        top: -2px;
+        cursor: pointer;
+    }
+}
+
+
+input.date_form{
+    background: url("../img/ico/ico_calander.png") no-repeat;
+    background-position: 98% center;
+
+    &::-moz-placeholder,
+    &::-webkit-input-placeholder ,
+    &:-ms-input-placeholder {
+        color: #333333;
+    }
+    &.date_form3 {
+        background: none;
+    }
+}
+
+
+button.ui-datepicker-trigger {
+    display: none;
+}
+
+img.ui-datepicker-taigger {
+    margin-left: 10px;
+    margin-top: 1px;
+}
+
+.ui-datepicker-trigger {
+    margin-left: 10px;
+}
+
+
+// ------------------------------------------------------------ 
+
+.only_web {
+    display: block !important;
+}
+
+.only_mo {
+    display: none !important;
+}
+
+.only_mo_inline {
+    display: none !important;
+}
+
+.only_web_inline {
+    display: inline-block !important;
+}
+
+.only_web_flex {
+    display: flex !important;
+}
+
+small.web {
+    display: inline-block !important;
+}
+
+small.mo {
+    display: none !important;
+}
+
+@media screen and (max-width: 850px) {
+
+    small.web {
+        display: none !important;
+    }
+
+    small.mo {
+        display: inline-block !important;
+    }
+
+    .only_web {
+        display: none !important;
+    }
+
+    .only_mo {
+        display: block !important;
+    }
+
+    .only_mo_inline {
+        display: inline-block !important;
+    }
+
+    .only_web_inline {
+        display: none !important;
+    }
+
+    .only_web_flex {
+        display: none !important;
+    }
+
+
+
+    .mo_block_100 {
+        display: block;
+    }
+
+    .mo_block_100>* {
+        width: 100% !important;
+        margin-left: 0;
+    }
+
+    .chk_box {
+        display: flex;
+        align-items: center;
+        line-height: 6.944vw;
+    
+        input[type="checkbox"] {
+    
+            &+label {
+                padding-left: 11.11vw;
+                 line-height: 1.2;
+    
+                &::after {
+                    border: 0.277vw solid $l-db;
+                    width: 6.944vw;
+                    height: 6.944vw;
+                }
+            }
+            &:checked+label::after{
+                border: 0.277vw solid $c-purple;
+                background-image: url(../img/ico_chk_m.png);
+                background-size: 6.944vw;
+        
+            }
+    
+        }
+        
+        &.small {
+            line-height: 6.944vw;
+            input[type="checkbox"] {
+        
+                &+label {
+                    padding-left: calc(6.944vw + 3.88vw);
+                    line-height: 1.2;
+        
+                    &::after {
+                        width: 6.944vw;
+                        height: 6.944vw;
+                    }
+                }
+                &:checked+label::after{
+                    background-image: url(../img/ico_chk_small_m.png);
+            
+                }
+        
+            }
+        }
+    }
+
+}
+
+// 익스플로러 
+@media screen and (-ms-high-contrast: active),
+(-ms-high-contrast: none) {}

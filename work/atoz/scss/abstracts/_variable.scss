@@ -1,0 +1,83 @@
+$tablet: 1024px;
+$mobile: 851px;
+
+
+$c-pt: #f73333;
+$c-pt-deep: #6a5fe1;
+$c-bs: #252525;
+$c-bl1: #252525;
+$c-bl2: #454545;
+$c-g1: #757575;
+$c-w: #fff;
+$c-g2: #999;
+$c-g3: #bbb;
+$c-g4: #aaa;
+$l-bb: #bbb;
+$l-dd: #ddd;
+$l-db: #dbdbdb;
+$l-ee: #eee;
+$bg-color-gray2: #f9f9f9;
+$bg-color-gray: #f6f6f6;
+$chk-w1: 37px;
+$chk-w2: 28px;
+$rdo-w1: 16px;
+$rdo-in-w1: 9.6px;
+$c-dis: #ed413f;
+$c-danger: #f50000;
+$bg-color1: #191919;
+$text-color: #a8a8a8;
+$c-black: #04090d;
+$c-pink: #e900ff;
+$c-purple: #5800ff;
+$list-mg-20: 20px;
+$list-mg: 10px;
+$mg-10: 10px;
+$kakao-bg: #f9e000;
+$kakao-text: #381e1f;
+
+
+$foot-policy-bright: #f3f3f3;
+$foot-policy: #dcdcdc;
+
+$foot-color: #999999;
+$foot-color-pt: #aaa;
+
+
+
+$light: 300;
+$bold: 700;
+$medium: 500;
+$e-bold: 800;
+
+
+%radius{
+    border-radius: 50px;
+} 
+
+%ttl {
+    font-size: 59px;
+    font-family: 'esamanru';
+}
+%foot-txt {
+    font-size: 24px;
+    font-family: 'Pretendard';
+    font-weight: 400;
+}
+
+@mixin desktop {
+    @media (min-width: #{$tablet}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: #{$mobile}) and (max-width: #{$tablet - 1px}) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: #{$mobile - 1px}) {
+        @content;
+    }
+}

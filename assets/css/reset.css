@@ -31,6 +31,9 @@ html,
 body {
   height: 100%;
   font-size: 20px;
+  font-family: "Noto Sans KR", sans-serif;
+  color: #fffce1;
+  background: #0e100f;
 }
 
 img,
@@ -57,11 +60,7 @@ table {
   border-spacing: 0;
 }
 
-/*
-    @세팅구역
-*/
 body {
-  font-size: 14px;
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
