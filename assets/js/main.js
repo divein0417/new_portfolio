@@ -100,6 +100,13 @@ $(function () {
 		},
 	});
 
+	$(document).ready(function () {
+		$(".work-item").on("touchstart mouseenter", function () {
+			$(this).addClass("active");
+		}).on("touchend mouseleave", function () {
+			$(this).removeClass("active");
+		});
+	});
 
 
 });

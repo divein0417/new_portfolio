@@ -31,9 +31,9 @@ html,
 body {
   height: 100%;
   font-size: 20px;
-  font-family: "Noto Sans KR", sans-serif;
-  color: #fffce1;
-  background: #0e100f;
+  font-family:  var(--dh-body-font-family);
+  color: var(--color-default);
+  background: var(--bg-color-dark);
 }
 
 img,
@@ -128,24 +128,24 @@ textarea {
 }
 input::-moz-placeholder, textarea::-moz-placeholder {
   /* Chrome, Safari, Firefox */
-  color: #444;
+  color: var(--color-default);
   opacity: 1;
 }
 input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   /* Chrome, Safari, Firefox */
-  color: #444;
+  color: var(--color-default);
   opacity: 1;
 }
 input::placeholder,
 textarea::placeholder {
   /* Chrome, Safari, Firefox */
-  color: #444;
+  color: var(--color-default);
   opacity: 1;
 }
 input:-ms-input-placeholder,
 textarea:-ms-input-placeholder {
   /* IE, Edge */
-  color: #444;
+  color: var(--color-default);
   opacity: 1;
 }
 input[readonly]::-moz-placeholder, input:disabled::-moz-placeholder, textarea[readonly]::-moz-placeholder, textarea:disabled::-moz-placeholder {

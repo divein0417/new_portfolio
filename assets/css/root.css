@@ -1,0 +1,20 @@
+@charset "UTF-8";
+:root {
+  --color-point: #fec5fb;
+  --color-default: #fffce1;
+  --bg-color-dark: #0e100f;
+  --dh-bg-filter-gradien: progid:DXImageTransform.Microsoft.gradient(startColorstr= #ff9600 ,endColorstr= #f83600 ,GradientType=1);
+  --dh-font-sans-serif: "Pretendard";
+  --dh-font-lato: "Lato";
+  --defalut-font-family: "Noto Sans KR", sans-serif;
+  --dh-body-font-family: var(--defalut-font-family);
+  --dh-body-font-size: 1rem;
+  --dh-body-font-weight: 400;
+  --dh-body-line-height: 1;
+  --dh-body-color: #252525;
+  --dh-body-bg: #fff;
+  --dh-border-color: #dbdbdb;
+  --dh-input-height: 52px;
+  --dh-input-padding: 0 15px;
+  --dh-input-rounded: 0;
+}
