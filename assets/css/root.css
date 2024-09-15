@@ -2,7 +2,9 @@
 :root {
   --color-point: #fec5fb;
   --color-default: #fffce1;
-  --bg-color-dark: #0e100f;
+  --color-dark: rgb(14, 16, 15);
+  --color-gray-1: #333;
+  --color-gray-2: #777;
   --padding-80: 80px;
   --defalut-font-family: "Noto Sans KR", sans-serif;
   --mont-font-family: "Montserrat", sans-serif;
