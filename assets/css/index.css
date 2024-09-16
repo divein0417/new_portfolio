@@ -43,6 +43,9 @@ footer {
   -webkit-background-clip: text;
 }
 
+.wrapper {
+  overflow: hidden;
+}
 
 /* visual-sec */
 .visual-sec {
@@ -109,12 +112,12 @@ footer {
   filter: blur(10px);
 }
 
-.visual-sec .visual-icon .icon05 {
+/* .visual-sec .visual-icon .icon05 {
   left: -10%;
   top: -10%;
   width: 26%;
   transform: rotate(20deg) scale(2);
-}
+} */
 
 /* project-sec */
 .project-sec {
@@ -195,6 +198,7 @@ footer {
 .project-sec .project-list li .tag {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   margin-top: 25px;
 }
 
