@@ -5,6 +5,17 @@
 
 	
 }
+
+@media (max-width: 1080px) {
+	.project-sec .project-list li a {
+		flex-direction: column-reverse;
+		align-items: flex-start;
+	}
+	.project-sec .project-list li .year {
+		margin-left: 0;
+	}
+
+}
 @media (max-width: 850px) {
 	html {
 		font-size: .9375rem !important;
@@ -23,6 +34,7 @@
 	
 	.current {
 		font-size: 4rem;
+		padding: 0 var(--mobile-padding);
 	}
 	
 	/* visual-sec */
