@@ -11,8 +11,14 @@ header {
   color: #fff;
 }
 
-header h1 {
-  width: 6%;
+header .logo {
+  display: block;
+  width: 100px;
+}
+
+footer {
+  width: 100%;
+  padding: 0 var(--padding-80) 30px;
 }
 
 .current {
@@ -131,7 +137,7 @@ header h1 {
   padding: 50px var(--padding-80);
   font-family: var(--point-font-family);
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 .project-sec .project-list li::after {
@@ -146,7 +152,7 @@ header h1 {
   left: 0;
   font-size: 62px;
   font-weight: 900;
-  z-index: 2;
+  z-index: 1;
   background-color: rgba(255, 255, 255, 0.5);
   color: var(--color-dark);
   opacity: 0;
@@ -200,9 +206,15 @@ header h1 {
   border-radius: 5px;
   color: var(--color-gray-2);
   background: var(--color-gray-1);
-
 }
 
 .project-sec .project-list li .hashtag+.hashtag {
   margin-left: 10px;
 }
+
+/* project-board */
+.project-board {
+  padding: 200px var(--padding-80);
+}
+
+

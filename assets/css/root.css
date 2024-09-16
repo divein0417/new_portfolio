@@ -6,6 +6,7 @@
   --color-gray-1: #333;
   --color-gray-2: #777;
   --padding-80: 80px;
+  --mobile-padding: 2.6667rem;
   --defalut-font-family: "Noto Sans KR", sans-serif;
   --mont-font-family: "Montserrat", sans-serif;
   --body-font-family: var(--defalut-font-family);

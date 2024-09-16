@@ -1,15 +1,6 @@
 $(function () {
-	gsap.to('.bg', {
-		autoAlpha: 1,
-		ease: 'power1.in',
-		scrollTrigger: {
-			trigger: '.visual-sec',
-			start: 'bottom bottom',
-			end: 'bottom 100px',
-			scrub: 1,
-		},
-	});
 
+	// 비주얼 아이콘
 	gsap.to('.visual-sec .visual-icon img', {
 		yPercent: 10,
 		opacity: 1,
@@ -25,7 +16,7 @@ $(function () {
 
 		gsap.to(element, {
 			scrollTrigger: {
-				trigger: '.sc-visual',
+				trigger: '.visual-sec',
 				start: 'top top',
 				end: 'bottom top',
 				scrub: 1,
@@ -36,70 +27,20 @@ $(function () {
 		})
 	});
 
-	gsap.registerPlugin(ScrollTrigger);
-	// left의 소개글은 스크롤에 따라 움직이지 않도록 고정된 상태로 처리
-	gsap.utils.toArray('.about-sec .about-info p').forEach((p, index) => {
-		gsap.from(p, {
-			y: 100,
-			opacity: 0,
-			duration: 1,
-			ease: "power3.out",
-			scrollTrigger: {
-				trigger: p,
-				start: "top 90%",
-				end: "top 50%",
-				scrub: true,
-				once: false,
-				stagger: 0.1
-			}
-		});
-	});
-
-	gsap.utils.toArray('.about-sec .about-skil img').forEach((img, index) => {
-		gsap.from(img, {
-			y: 100,
-			opacity: 0,
-			duration: 1,
-			ease: "power3.out",
-			scrollTrigger: {
-				trigger: img,
-				start: "top 90%",
-				end: "top 50%",
-				scrub: true,
-				once: false,
-				stagger: 0.1
-			}
-		});
-	});
-
-
-
-	// orbit
-
-	// var path = anime.path('.orbit-context path');
-	// var motionPath = anime({
-	// 	targets: '.square',
-	// 	easing: 'easeInQuad',
-	// 	translateX: path('x'),
-	// 	translateY: path('y'),
-	// 	rotate: path('angle'),
-	// 	duration: 8000,
-	// 	loop: true,
-	// });
-
-	// 	// text reveal animation
-
+	// 텍스트 효과
 	gsap.to('.current p', {
 		backgroundPositionX: '0%',
 		stagger: 1,
 		scrollTrigger: {
-			trigger: '.tit-point',
+			trigger: '.current',
 			scrub: 1,
 			start: 'top center',
 			end: 'bottom center',
 		},
 	});
 
+
+	// 프로젝트 리스트 active
 	$(document).ready(function () {
 		$(".project-list li").on("touchstart mouseenter", function () {
 			$(this).addClass("active");
@@ -108,5 +49,17 @@ $(function () {
 		});
 	});
 
+
+	// 페이지가 로드될 때 스크롤 위치 복원
+	$(document).ready(function () {
+		if (sessionStorage.getItem('scrollPos')) {
+			$(window).scrollTop(sessionStorage.getItem('scrollPos'));
+		}
+	});
+
+	// 페이지가 떠날 때 스크롤 위치 저장
+	$(window).on('beforeunload', function () {
+		sessionStorage.setItem('scrollPos', $(window).scrollTop());
+	});
 
 });
