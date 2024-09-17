@@ -210,10 +210,8 @@ footer {
   border-radius: 5px;
   color: var(--color-gray-2);
   background: var(--color-gray-1);
-}
-
-.project-sec .project-list li .hashtag+.hashtag {
-  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px
 }
 
 /* project-board */
